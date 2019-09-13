@@ -83,4 +83,8 @@ class Context(private val baseName: String) {
             SwingUtilities.invokeLater(dispatcher)
         }
     }
+
+    companion object {
+        val INSTANCE = Context("MyResources").apply { locale = Locale("PL") }
+    }
 }

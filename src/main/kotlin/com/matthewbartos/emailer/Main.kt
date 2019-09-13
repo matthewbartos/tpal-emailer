@@ -3,7 +3,9 @@ package com.matthewbartos.emailer
 import com.matthewbartos.emailer.locale.Context
 import com.matthewbartos.emailer.locale.ContextChangeListener
 import com.matthewbartos.emailer.view.InboxView
+import java.awt.Desktop
 import java.awt.EventQueue
+import java.net.URI
 import java.util.Locale
 import javax.swing.JFrame
 import javax.swing.JMenu

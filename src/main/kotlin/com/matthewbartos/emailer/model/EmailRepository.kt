@@ -53,10 +53,10 @@ class EmailRepository {
         )
 
         val CONTENTS = listOf(
-            "Hello! Please check your calendar and pick a proper date to meet.",
-            "Hi there, we need to discuss this topic offline. Please respond ASAP!",
-            "Good morning! We're informing you that your latest inquiry couldn't be completed. Please contact our technical department.",
-            "Hello! Due to a recent database incident we are not able to complete your order."
+            "Hello! \nPlease check your calendar and pick a proper date to meet.",
+            "Hi there, \nwe need to discuss this topic offline.\n Please respond ASAP!",
+            "Good morning!\n We're informing you that your latest inquiry couldn't be completed.\n Please contact our technical department.",
+            "Hello!\n Due to a recent database incident we are not able to complete your order."
         )
 
         val SENDERS = listOf(

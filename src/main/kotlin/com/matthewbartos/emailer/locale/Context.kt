@@ -85,6 +85,6 @@ class Context(private val baseName: String) {
     }
 
     companion object {
-        val INSTANCE = Context("MyResources").apply { locale = Locale("PL") }
+        val INSTANCE = Context("MyResources").apply { locale = Locale("EN") }
     }
 }

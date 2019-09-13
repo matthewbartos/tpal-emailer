@@ -1,10 +1,15 @@
 package com.matthewbartos.emailer
 
+import com.matthewbartos.emailer.view.InboxView
+import java.awt.BorderLayout
+import java.awt.Color.BLUE
 import java.awt.EventQueue
 import javax.swing.JFrame
 import javax.swing.JMenu
 import javax.swing.JMenuBar
 import javax.swing.JMenuItem
+import javax.swing.JPanel
+import javax.swing.UIManager
 
 class Main(title: String) : JFrame() {
 
@@ -12,7 +17,7 @@ class Main(title: String) : JFrame() {
         setTitle(title)
 
         defaultCloseOperation = EXIT_ON_CLOSE
-        setSize(300, 200)
+        setSize(500, 500)
         setLocationRelativeTo(null)
 
         jMenuBar = JMenuBar().apply {
@@ -29,6 +34,11 @@ class Main(title: String) : JFrame() {
 private fun createAndShowGUI() {
     val frame = Main("Mailer")
     frame.isVisible = true
+    frame.contentPane.add(InboxView())
 }
 
-fun main() = EventQueue.invokeLater(::createAndShowGUI)
+fun main() {
+    UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName())
+    com.sun.javafx.application.PlatformImpl.startup { }
+    EventQueue.invokeLater(::createAndShowGUI)
+}
